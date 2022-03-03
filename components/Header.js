@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 const Header = ({ blok }) => {
     return (
         <div {...sbEditable(blok)} className={styles.description}>
-           <h2 className={styles.title}>{blok.headline}</h2>
-           <p> {blok.description} </p>
+           <h4 className={styles.title}>{blok.headline}</h4>
+           <h2> {blok.description} </h2>
         </div>  
 
     )

@@ -2,12 +2,14 @@ import Grid from './Grid'
 import Header from './Header'
 import Page from './Page'
 import Restaurants from './Restaurants'
+import MyArticles from './MyArticles'
 
 const Components = {
     grid: Grid,
     header: Header,
     page: Page,
-    restaurants: Restaurants
+    restaurants: Restaurants,
+    myArticles: MyArticles
 };
 
 const DynamicComponent = ({ blok }) => {

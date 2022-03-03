@@ -41,6 +41,7 @@ export async function getStaticProps({ preview = false }) {
   // load the published content outside of the preview mode
   let sbParams = {
     version: "draft", // or 'published'
+    resolve_relations:"myArticles.articles"
   };
  
   if (preview) {
@@ -49,7 +50,7 @@ export async function getStaticProps({ preview = false }) {
     sbParams.cv = Date.now();
   }
  
-  let { data } = await Storyblok.get(`cdn/stories/${slug}`, sbParams);
+  let { data } = await Storyblok.get(`cdn/stories/${slug}`,sbParams);
  
   return {
     props: {

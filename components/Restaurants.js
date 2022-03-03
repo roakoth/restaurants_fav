@@ -7,6 +7,7 @@ const Restaurants = ({ blok }) => {
     return (
   <div {...sbEditable(blok)} className={styles.card}>
     <img className={styles.img} src={blok.image.filename} alt="restaurant" width={250} height={200} />
+   <h2> {blok.name} </h2>
     <p>{blok.description}</p>
     <p> {blok.location}</p>
   </div>
