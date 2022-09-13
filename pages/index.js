@@ -7,11 +7,14 @@ import Storyblok, { useStoryblok } from "../lib/storyblok";
 import DynamicComponent from '../components/DynamicComponent'
 
 
+
+
+
 export default function Home(props, preview) {
   const enableBridge = true; // load the storyblok bridge everywhere
   // const enableBridge = preview; // enable bridge only in prevew mode
  
-  //story = useStoryblok(story, enableBridge);
+ 
 
   const story = props.story
 
@@ -57,6 +60,6 @@ export async function getStaticProps({ preview = false }) {
       story: data ? data.story : null,
       preview,
     },
-    revalidate: 3600, // revalidate every hour
+    revalidate: 3600, // enable static content to be updated dynamically every hour
   };
 }
